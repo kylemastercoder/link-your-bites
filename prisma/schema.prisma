@@ -68,3 +68,14 @@ model PasswordResetToken {
 
   @@unique([email, token])
 }
+
+model Branch {
+  id  String  @id @default(uuid())
+  branchHead String
+  address String
+  name String
+  description String?
+  logo String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

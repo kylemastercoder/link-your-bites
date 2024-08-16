@@ -6,6 +6,7 @@ import React, { useEffect, useState } from "react";
 export const ImagesSlider = ({
   images,
   children,
+  id,
   overlay = true,
   overlayClassName,
   className,
@@ -16,6 +17,7 @@ export const ImagesSlider = ({
   children: React.ReactNode;
   overlay?: React.ReactNode;
   overlayClassName?: string;
+  id?: string;
   className?: string;
   autoplay?: boolean;
   direction?: "up" | "down";
@@ -118,6 +120,7 @@ export const ImagesSlider = ({
 
   return (
     <div
+      id={id}
       className={cn(
         "overflow-hidden h-full w-full relative flex items-center justify-center",
         className
